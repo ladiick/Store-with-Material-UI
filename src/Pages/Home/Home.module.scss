@@ -1,0 +1,54 @@
+.main {
+  height: 100%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.items__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 8px;
+  height: 100%;
+}
+
+.loader {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-color: #202020 #202020 #202020 transparent;
+    animation: loader 1.2s linear infinite;
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.input__label {
+  flex: 0.5;
+  margin: 0 15px;
+}
